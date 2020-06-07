@@ -1,0 +1,11 @@
+# DIRS
+build
+dist
+types
+node_modules
+coverage
+.github
+
+# FILES
+index.d.ts
+.DB_Store

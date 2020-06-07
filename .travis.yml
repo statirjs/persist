@@ -1,0 +1,36 @@
+language: node_js
+os: linux
+dist: xenial
+
+cache: npm
+
+stages:
+  - check
+  - size
+  - coveralls
+  - deploy
+
+jobs:
+  include:
+    - stage: check
+      script:
+        - npm run publish:check
+    - stage: size
+      script:
+        - npm run size:check
+    - stage: coveralls
+      script:
+        - npm run publish:coverage
+    - stage: deploy
+      if:
+        - tag IS present
+      script: skip
+      before_deploy:
+        - npm run publish:build
+      deploy:
+        provider: npm
+        skip_cleanup: true
+        email: '$NPM_EMAIL'
+        api_token: '$NPM_API_TOKEN'
+        on:
+          tags: true

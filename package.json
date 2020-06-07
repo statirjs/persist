@@ -1,0 +1,71 @@
+{
+  "name": "@statirjs/core",
+  "version": "1.0.2",
+  "description": "Minimalistic state manager",
+  "main": "./build/cjs/index.js",
+  "unpkg": "./build/umd/index.js",
+  "module": "./build/es/index.js",
+  "types": "./index.d.ts",
+  "scripts": {
+    "project:clean": "npx rimraf build dist types index.d.ts coverage",
+    "prettier:write": "npx prettier --write src",
+    "prettier:check": "npx prettier --check src",
+    "prettier:declaration": "npx prettier --write index.d.ts",
+    "eslint:check": "npx eslint --ext .ts src",
+    "jest:test": "npx jest tests",
+    "jest:coverage": "npx jest tests --coverage",
+    "coveralls:send": "npx coveralls < ./coverage/lcov.info",
+    "typescript:check": "npx tsc --noEmit",
+    "typescript:types": "npx tsc --emitDeclarationOnly --declarationDir types",
+    "rollup:build": "npx rollup -c",
+    "rollup:watch": "npx rollup -c -w",
+    "size:check": "npm run rollup:build && npx size-limit",
+    "scripts:types": "node ./scripts/types.js",
+    "publish:clean": "npx rimraf dist types coverage",
+    "publish:coverage": "npm run jest:coverage && npm run coveralls:send",
+    "publish:check": "npm run prettier:check && npm run eslint:check && npm run typescript:check && npm run jest:test",
+    "publish:build": "npm run rollup:build && npm run typescript:types && npm run scripts:types && npm run publish:clean && npm run prettier:declaration"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/statirjs/core.git"
+  },
+  "keywords": [
+    "@statirjs",
+    "statirjs",
+    "javascript",
+    "typescript",
+    "state",
+    "manager"
+  ],
+  "author": "Andrey Krasovsky <an.krasowsckij@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/statirjs/core/issues"
+  },
+  "homepage": "https://statirjs.github.io/page/#/content/core/home",
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^4.1.1",
+    "@size-limit/preset-small-lib": "^4.5.0",
+    "@types/jest": "^25.2.1",
+    "@typescript-eslint/eslint-plugin": "^2.27.0",
+    "@typescript-eslint/parser": "^2.27.0",
+    "coveralls": "^3.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-plugin-prettier": "^3.1.2",
+    "husky": "^4.2.5",
+    "jest": "^25.3.0",
+    "prettier": "^2.0.4",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.6.1",
+    "rollup-plugin-terser": "^5.3.0",
+    "size-limit": "^4.5.0",
+    "ts-jest": "^25.5.0",
+    "typescript": "^3.8.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {}
+}

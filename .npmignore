@@ -1,0 +1,27 @@
+# DIRS
+dist
+tests
+logo
+node_modules
+scripts
+coverage
+.github
+
+# FILES
+.DB_Store
+.editorconfig
+.eslintrc
+.eslintignore
+.huskyrc
+.nvmrc
+.prettierrc
+.prettierignore
+.travis.yml
+babel.config.json
+jest.config.js
+rollup.config.js
+tsconfig.json
+.size-limit.json
+ROADMAP.md
+CHANGELOG.md
+AUTHORS.md
