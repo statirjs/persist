@@ -1,7 +1,7 @@
 {
-  "name": "@statirjs/core",
-  "version": "1.0.2",
-  "description": "Minimalistic state manager",
+  "name": "@statirjs/persist",
+  "version": "0.1.0",
+  "description": "Persist middleware",
   "main": "./build/cjs/index.js",
   "unpkg": "./build/umd/index.js",
   "module": "./build/es/index.js",
@@ -28,22 +28,22 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/statirjs/core.git"
+    "url": "git+https://github.com/statirjs/persist.git"
   },
   "keywords": [
     "@statirjs",
     "statirjs",
     "javascript",
     "typescript",
-    "state",
-    "manager"
+    "persist",
+    "middleware"
   ],
   "author": "Andrey Krasovsky <an.krasowsckij@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/statirjs/core/issues"
+    "url": "https://github.com/statirjs/persist/issues"
   },
-  "homepage": "https://statirjs.github.io/page/#/content/core/home",
+  "homepage": "https://statirjs.github.io/page/#/content/persist/home",
   "devDependencies": {
     "@rollup/plugin-typescript": "^4.1.1",
     "@size-limit/preset-small-lib": "^4.5.0",
