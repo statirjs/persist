@@ -54,7 +54,7 @@ export default [
     output: {
       file: 'build/umd/index.js',
       format: 'umd',
-      name: 'statirjs'
+      name: 'persist'
     },
     external,
     plugins: [
@@ -68,7 +68,7 @@ export default [
     output: {
       file: 'build/umd/index.min.js',
       format: 'umd',
-      name: 'statirjs'
+      name: 'persist'
     },
     external,
     plugins: [
