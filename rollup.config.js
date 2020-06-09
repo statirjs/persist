@@ -52,7 +52,6 @@ export default [
   {
     input: 'src/index.ts',
     output: {
-      globals,
       file: 'build/umd/index.js',
       format: 'umd',
       name: 'statirjs'
@@ -67,7 +66,6 @@ export default [
   {
     input: 'src/index.ts',
     output: {
-      globals,
       file: 'build/umd/index.min.js',
       format: 'umd',
       name: 'statirjs'
