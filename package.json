@@ -7,6 +7,7 @@
   "module": "./build/es/index.js",
   "types": "./index.d.ts",
   "scripts": {
+    "postinstall": "npm run scripts:peers",
     "project:clean": "npx rimraf build dist types index.d.ts coverage",
     "prettier:write": "npx prettier --write src",
     "prettier:check": "npx prettier --check src",
@@ -21,6 +22,7 @@
     "rollup:watch": "npx rollup -c -w",
     "size:check": "npm run rollup:build && npx size-limit",
     "scripts:types": "node ./scripts/types.js",
+    "scripts:peers": "node ./scripts/peers.js && npx prettier --write ./package.json",
     "publish:clean": "npx rimraf dist types coverage",
     "publish:coverage": "npm run jest:coverage && npm run coveralls:send",
     "publish:check": "npm run prettier:check && npm run eslint:check && npm run typescript:check && npm run jest:test",
