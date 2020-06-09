@@ -3,7 +3,9 @@ import { terser } from 'rollup-plugin-terser';
 
 const external = ['@statirjs/core'];
 
-const globals = {};
+const globals = {
+  core: 'core'
+};
 
 export default [
   {
