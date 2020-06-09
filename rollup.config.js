@@ -4,7 +4,7 @@ import { terser } from 'rollup-plugin-terser';
 const external = ['@statirjs/core'];
 
 const globals = {
-  core: 'core'
+  '@statirjs/core': 'core'
 };
 
 export default [
@@ -56,7 +56,7 @@ export default [
     output: {
       file: 'build/umd/index.js',
       format: 'umd',
-      name: 'persist'
+      name: 'statirjs'
     },
     external,
     plugins: [
@@ -70,7 +70,7 @@ export default [
     output: {
       file: 'build/umd/index.min.js',
       format: 'umd',
-      name: 'persist'
+      name: 'statirjs'
     },
     external,
     plugins: [
