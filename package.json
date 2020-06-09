@@ -1,7 +1,7 @@
 {
   "name": "@statirjs/persist",
   "version": "0.1.0",
-  "description": "Persist middleware",
+  "description": "Persist upgrade",
   "main": "./build/cjs/index.js",
   "unpkg": "./build/umd/index.js",
   "module": "./build/es/index.js",
@@ -36,7 +36,7 @@
     "javascript",
     "typescript",
     "persist",
-    "middleware"
+    "upgrade"
   ],
   "author": "Andrey Krasovsky <an.krasowsckij@gmail.com>",
   "license": "MIT",
@@ -67,5 +67,8 @@
   "publishConfig": {
     "access": "public"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "peerDependencies": {
+    "@statirjs/core": "^1.1.2"
+  }
 }

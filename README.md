@@ -1,6 +1,6 @@
 # <img src='https://raw.githubusercontent.com/statirjs/page/dev/assets/statirjs_text.png' height='100' alt='Statirjs Logo' aria-label='statirjs' />
 
-**"@statirjs/persist"** is a **@statirjs/core** persist middleware worked with any **statirjs** allowed framework/platform
+**"@statirjs/persist"** is a **@statirjs/core** persist upgrade worked with any **statirjs** allowed framework/platform
 
 ## How to install?
 
