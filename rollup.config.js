@@ -3,7 +3,9 @@ import { terser } from 'rollup-plugin-terser';
 
 const external = ['@statirjs/core'];
 
-const globals = {};
+const globals = {
+  '@statirjs/core': 'core'
+};
 
 export default [
   {
@@ -52,6 +54,7 @@ export default [
   {
     input: 'src/index.ts',
     output: {
+      globals,
       file: 'build/umd/index.js',
       format: 'umd',
       name: '@statirjs/persist'
@@ -66,6 +69,7 @@ export default [
   {
     input: 'src/index.ts',
     output: {
+      globals,
       file: 'build/umd/index.min.js',
       format: 'umd',
       name: '@statirjs/persist'
