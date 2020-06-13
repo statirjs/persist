@@ -16,21 +16,22 @@ export const persistForme = createForme(state, () => ({
       push(state) {
         return {
           ...state,
-          isPersisting: true
+          isPersisting: true,
+          status: S.PERSIST_STATUS.UNPERSISTED
         };
       },
       done(state) {
         return {
           ...state,
-          status: S.PERSIST_STATUS.PERSISTED,
-          isPersisting: false
+          isPersisting: false,
+          status: S.PERSIST_STATUS.PERSISTED
         };
       },
       fail(state) {
         return {
           ...state,
-          status: S.PERSIST_STATUS.ERROR,
-          isPersisting: false
+          isPersisting: false,
+          status: S.PERSIST_STATUS.ERROR
         };
       }
     }

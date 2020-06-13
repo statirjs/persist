@@ -7,7 +7,6 @@
   "module": "./build/es/index.js",
   "types": "./index.d.ts",
   "scripts": {
-    "postinstall": "npm run scripts:peers",
     "project:clean": "npx rimraf build dist types index.d.ts coverage",
     "prettier:write": "npx prettier --write src",
     "prettier:check": "npx prettier --check src",
@@ -21,7 +20,7 @@
     "rollup:build": "npx rollup -c",
     "rollup:watch": "npx rollup -c -w",
     "size:check": "npm run rollup:build && npx size-limit",
-    "scripts:types": "node ./scripts/types.js",
+    "scripts:types": "node ./scripts/types.js && npx prettier --write ./index.d.ts",
     "scripts:peers": "node ./scripts/peers.js && npx prettier --write ./package.json",
     "publish:clean": "npx rimraf dist types coverage",
     "publish:coverage": "npm run jest:coverage && npm run coveralls:send",
@@ -50,15 +49,19 @@
     "@rollup/plugin-typescript": "^4.1.1",
     "@size-limit/preset-small-lib": "^4.5.0",
     "@types/jest": "^25.2.1",
+    "@types/react": "^16.9.36",
+    "@types/react-test-renderer": "^16.9.2",
     "@typescript-eslint/eslint-plugin": "^2.27.0",
     "@typescript-eslint/parser": "^2.27.0",
     "coveralls": "^3.1.0",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.10.1",
     "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.20.0",
     "husky": "^4.2.5",
     "jest": "^25.3.0",
     "prettier": "^2.0.4",
+    "react-test-renderer": "^16.13.1",
     "rimraf": "^3.0.2",
     "rollup": "^2.6.1",
     "rollup-plugin-terser": "^5.3.0",
@@ -71,6 +74,8 @@
   },
   "dependencies": {},
   "peerDependencies": {
-    "@statirjs/core": "^1.1.2"
+    "@statirjs/core": "^1.1.6",
+    "@statirjs/react": "^0.1.7",
+    "react": "^16.13.1"
   }
 }

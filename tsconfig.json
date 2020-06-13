@@ -15,7 +15,8 @@
     "strict": true,
     "noEmit": false,
     "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "jsx": "react"
   },
   "include": ["src"]
 }

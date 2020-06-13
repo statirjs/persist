@@ -7,6 +7,7 @@
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:react/recommended",
     "plugin:prettier/recommended"
   ],
   "globals": {
@@ -16,7 +17,10 @@
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaVersion": 2018,
-    "sourceType": "module"
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
   },
   "plugins": ["@typescript-eslint"],
   "rules": {

@@ -1,4 +1,5 @@
 import { RootState } from '@statirjs/core';
+import { PERSIST_FORME } from '../formes/persist';
 import * as S from '../typing/internal';
 
 const UTILITY_ACC = {};
@@ -32,22 +33,30 @@ export function extractBlackkeys(blacklist: string[], keys: string[]) {
 }
 
 export function mergeItem(keys: string[], rootState: RootState): S.Item {
-  return keys
-    .map((key) => rootState[key])
-    .reduce(
-      (acc, next) => ({
-        ...acc,
-        ...next
-      }),
-      UTILITY_ACC
-    );
+  function mapKeys(key: string) {
+    return { [key]: rootState[key] };
+  }
+
+  function reduceItem(acc: RootState, next: S.Item) {
+    return { ...acc, ...next };
+  }
+
+  return keys.map(mapKeys).reduce(reduceItem, UTILITY_ACC);
 }
 
 export function createExtractor(whitelist: string[], blacklist: string[]) {
+  function includes(keys: string[]) {
+    return function (key: string) {
+      return keys.includes(key);
+    };
+  }
+
   return function (rootState: RootState): S.Item {
     const keys = Object.keys(rootState);
-    const whitefull = extractWhitekeys(whitelist, keys);
-    const blackfull = extractBlackkeys(blacklist, whitefull);
+    const validWhitelist = whitelist.filter(includes(keys));
+    const validBlacklist = [...blacklist.filter(includes(keys)), PERSIST_FORME];
+    const whitefull = extractWhitekeys(validWhitelist, keys);
+    const blackfull = extractBlackkeys(validBlacklist, whitefull);
     return mergeItem(blackfull, rootState);
   };
 }

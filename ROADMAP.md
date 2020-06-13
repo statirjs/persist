@@ -12,17 +12,12 @@
 - [x] Init husky
 - [x] Init scripts
 - [x] Add upgrade
-- [x] Add middleware
 - [x] Add persist forme
 - [x] Add config mechanism
-- [x] Add AsyncStorage functionality
-- [x] Add localStorage functionality
-- [x] Add sessionStorage functionality
+- [x] Add storage functionality
 - [x] Add peer dependency @statirjs/core
 - [ ] Add upgrade tests
-- [ ] Add middleware tests
-- [ ] Add AsyncStorage tests
-- [ ] Add localStorage tests
-- [ ] Add sessionStorage tests
-- [ ] Add config tests
-- [x] Update to version 0.1.0
+- [x] Add storage tests
+- [x] Add gate component
+- [ ] Add gate component test
+- [x] Add peer dependency @statirjs/react

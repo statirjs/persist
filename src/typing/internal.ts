@@ -1,3 +1,4 @@
+import { ReactNode } from 'react';
 import { RootState } from '@statirjs/core';
 
 export type Item = any;
@@ -12,6 +13,10 @@ export interface ConfigStorage {
   getItem(key: string): Promise<Item>;
   setItem(key: string, item: Item): Promise<void>;
   removeItem(key: string): Promise<void>;
+}
+
+export interface PersistGateProps {
+  children?: ReactNode;
 }
 
 export interface Config {

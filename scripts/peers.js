@@ -4,7 +4,7 @@ const { execSync } = require('child_process');
 
 const PACKAGE_PATH = '../package.json';
 
-const PEERS = ['@statirjs/core'];
+const PEERS = ['react', '@statirjs/core', '@statirjs/react'];
 
 function logger(error) {
   error && console.log(error);

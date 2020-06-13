@@ -1,10 +1,12 @@
 import typescript from '@rollup/plugin-typescript';
 import { terser } from 'rollup-plugin-terser';
 
-const external = ['@statirjs/core'];
+const external = ['@statirjs/core', '@statirjs/react', 'react'];
 
 const globals = {
-  '@statirjs/core': 'core'
+  react: 'React',
+  '@statirjs/core': 'StatirjsCore',
+  '@statirjs/react': 'StatirjsReact'
 };
 
 export default [
