@@ -2,9 +2,13 @@ import { Update, UpdateState } from '@statirjs/core';
 import { PERSIST_FORME, PERSIST_ACTION } from '../forme/persist';
 import * as S from '../typing/internal';
 
-const STEP = 'done';
+const STEP_DONE = 'done';
 
-const UPDATE_IDENTIFICATOR = `${PERSIST_FORME}/${PERSIST_ACTION}:${STEP}`;
+const STEP_PUSH = 'push';
+
+const DONE_IDENTIFICATOR = `${PERSIST_FORME}/${PERSIST_ACTION}:${STEP_DONE}`;
+
+const PUSH_IDENTIFICATOR = `${PERSIST_FORME}/${PERSIST_ACTION}:${STEP_PUSH}`;
 
 export function nextPersist(
   update: Update<S.PersistDoneState>,
@@ -33,8 +37,10 @@ export function persistMiddleware(next: UpdateState): UpdateState {
     const { formeName, actionName } = update;
     const identificator = `${formeName}/${actionName}`;
 
-    UPDATE_IDENTIFICATOR === identificator
+    DONE_IDENTIFICATOR === identificator
       ? nextPersist(update, next)
+      : PUSH_IDENTIFICATOR === identificator
+      ? next({ ...update, disable: true })
       : next(update);
   };
 }

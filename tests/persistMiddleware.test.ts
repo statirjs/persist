@@ -61,6 +61,7 @@ describe('Test persistMiddleware.test', () => {
     expect(next.mock.calls[0][0]).toEqual({
       actionName: 'init:push',
       formeName: 'persist',
+      disable: true,
       state: {
         isPersisting: false,
         status: S.PERSIST_STATUS.UNPERSISTED
