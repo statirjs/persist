@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { Dispatch } from '@statirjs/core';
 import { useDispatch } from '@statirjs/react';
 import { PERSIST_FORME, PERSIST_ACTION } from '../forme/persist';
@@ -15,5 +15,5 @@ export function PersistGate(props: S.PersistGateProps) {
     init();
   }, []);
 
-  return children;
+  return <>{children}</>;
 }

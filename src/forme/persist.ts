@@ -13,7 +13,7 @@ const state: S.PersistState = {
 export function createPersistForme(name: string, storage: S.WrappedStorage) {
   return createForme(state, () => ({
     pipes: {
-      [PERSIST_ACTION]: {
+      init: {
         push(state) {
           return {
             ...state,

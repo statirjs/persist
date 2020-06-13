@@ -16,7 +16,7 @@
 - [x] Add config mechanism
 - [x] Add storage functionality
 - [x] Add peer dependency @statirjs/core
-- [ ] Add upgrade tests
+- [x] Add upgrade tests
 - [x] Add storage tests
 - [x] Add gate component
 - [ ] Add gate component tests
