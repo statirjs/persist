@@ -1,6 +1,6 @@
 {
   "name": "@statirjs/persist",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Persist upgrade",
   "main": "./build/cjs/index.js",
   "unpkg": "./build/umd/index.js",
