@@ -9,7 +9,7 @@ export interface Storage {
   removeItem(key: string): Promise<void>;
 }
 
-export interface ConfigStorage {
+export interface WrappedStorage {
   getItem(key: string): Promise<Item>;
   setItem(key: string, item: Item): Promise<void>;
   removeItem(key: string): Promise<void>;
@@ -32,6 +32,12 @@ export enum PERSIST_STATUS {
   PERSISTED = 'PERSISTED',
   UNPERSISTED = 'UNPERSISTED',
   ERROR = 'ERROR'
+}
+
+export interface PersistDoneState {
+  isPersisting: boolean;
+  status: PERSIST_STATUS;
+  data: Item;
 }
 
 export interface PersistState {

@@ -19,5 +19,7 @@
 - [ ] Add upgrade tests
 - [x] Add storage tests
 - [x] Add gate component
-- [ ] Add gate component test
+- [ ] Add gate component tests
 - [x] Add peer dependency @statirjs/react
+- [x] Add middleware
+- [x] Add middleware tests

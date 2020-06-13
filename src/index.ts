@@ -1,3 +1,3 @@
-export { PERSIST_FORME, PERSIST_ACTION } from './formes/persist';
-export { createPersistUpgrade } from './upgrades/creator';
+export { PERSIST_FORME, PERSIST_ACTION } from './forme/persist';
+export { createPersistUpgrade } from './upgrade/creator';
 export { PersistGate } from './gate/persist';

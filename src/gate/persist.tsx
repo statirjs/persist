@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { Dispatch } from '@statirjs/core';
 import { useDispatch } from '@statirjs/react';
-import { PERSIST_FORME, PERSIST_ACTION } from '../formes/persist';
+import { PERSIST_FORME, PERSIST_ACTION } from '../forme/persist';
 import * as S from '../typing/internal';
 
 export function PersistGate(props: S.PersistGateProps) {

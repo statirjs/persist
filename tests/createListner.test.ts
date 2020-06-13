@@ -1,5 +1,5 @@
 import { RootState } from '@statirjs/core';
-import { createListner } from '../src/upgrades/creator';
+import { createListner } from '../src/upgrade/creator';
 import { wrapStorage, createExtractor } from '../src/storage/creator';
 import * as S from '../src/typing/internal';
 
@@ -7,7 +7,7 @@ describe('Test createListner', () => {
   test('incorrect data', () => {
     const name = 'persist';
 
-    const storage = {} as S.ConfigStorage;
+    const storage = {} as S.WrappedStorage;
 
     const extractor: S.Extractor = () => {};
 

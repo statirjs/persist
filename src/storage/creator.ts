@@ -1,10 +1,10 @@
 import { RootState } from '@statirjs/core';
-import { PERSIST_FORME } from '../formes/persist';
+import { PERSIST_FORME } from '../forme/persist';
 import * as S from '../typing/internal';
 
 const UTILITY_ACC = {};
 
-export function wrapStorage(storage: S.Storage): S.ConfigStorage {
+export function wrapStorage(storage: S.Storage): S.WrappedStorage {
   return {
     async getItem(key) {
       const data = await storage.getItem(key);
