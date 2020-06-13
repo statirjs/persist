@@ -75,7 +75,7 @@
   "dependencies": {},
   "peerDependencies": {
     "@statirjs/core": "^1.1.6",
-    "@statirjs/react": "^0.1.7",
+    "@statirjs/react": "^0.1.8",
     "react": "^16.13.1"
   }
 }

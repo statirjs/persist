@@ -1,7 +1,3 @@
-# MILESTONE №2
-
-- [ ] Extend README
-
 # MILESTONE №1 (June 8, 2020 - today)
 
 - [x] Init github templates
@@ -23,3 +19,4 @@
 - [x] Add peer dependency @statirjs/react
 - [x] Add middleware
 - [x] Add middleware tests
+- [x] Extend README
