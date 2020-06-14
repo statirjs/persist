@@ -6,7 +6,7 @@
 [![Coverage Status](https://coveralls.io/repos/github/statirjs/persist/badge.svg?branch=dev&service=github)](https://coveralls.io/github/statirjs/persist?branch=dev&service=github)
 [![Discord](https://img.shields.io/discord/713451221901508720?label=discord)](https://discord.gg/9kezggD)
 
-**"@statirjs/persist"** is a **@statirjs/core** persist upgrade worked with any **statirjs** allowed framework/platform
+**"@statirjs/persist"** is a **@statirjs/core** persist upgrade that is compatible with any **statirjs** allowed frameworks/platforms
 
 ## How to install?
 
